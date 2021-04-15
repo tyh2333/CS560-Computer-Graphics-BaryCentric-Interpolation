@@ -44,16 +44,17 @@ class Triangle{
 public:
     Point p1{}, p2{}, p3{};
     float rot = 0;
+    /// Every triangle has own texture
     vector<pair<BaryCentric, Pixel>> texture;
     Triangle() = default;
     Triangle(Point point1, Point point2, Point point3){
         p1 = point1; p2 = point2; p3 = point3;
     }
-    /// Check if p3 in the right triangle, argument p3
+    /// Check if p3 in the current triangle, argument p3
     bool if_point_in_triangle(Point);
     /// bary <-> standard, change of coordinate
-    Point convert_to_standard(BaryCentric);
-    BaryCentric convert_to_bary(Point);
+    Point bary_to_standard(BaryCentric);
+    BaryCentric standard_to_bary(Point);
     /// draw triangles, arguments : x and y
     void draw(int, int);
 };
@@ -69,7 +70,6 @@ public:
     vector<Triangle> triangles;
 
     Flower();
-    void read(char*);
     void make_texture();
     void draw(); /// using triangle.draw to draw four triangles.
     /// In mouse and move function, passing current_click_point to point 3 to build new triangels.
