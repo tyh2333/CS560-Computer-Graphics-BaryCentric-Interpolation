@@ -5,8 +5,7 @@ Description:  Texture warping is a typical application of the graphical object m
 
 Your implementation:  In this assignment, you will implement the warping by deforming corner vertices of a rectangle. 
 Meanwhile, the texture should be mapped onto the deformed rectangle area.
-
-
+![image](https://user-images.githubusercontent.com/29907622/114824307-b442e100-9d92-11eb-96c2-cdf21fc90ffa.png)
 
 Your implementation consists of:
 (a)Load and display the image “flower.bmp”.
