@@ -44,7 +44,8 @@ class Triangle{
 public:
     Point p1{}, p2{}, p3{};
     float rot = 0;
-    /// Every triangle has own texture
+    /// Every triangle has own texture and these texture won't be change as mouse click;
+    /// So use interpolation to draw more pixels to make up the blanks
     vector<pair<BaryCentric, Pixel>> texture;
     Triangle() = default;
     Triangle(Point point1, Point point2, Point point3){

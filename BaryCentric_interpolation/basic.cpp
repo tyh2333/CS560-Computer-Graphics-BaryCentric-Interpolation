@@ -114,8 +114,12 @@ void Triangle::draw(int offset_x, int offset_y){
         Point point_to_draw = bary_to_standard(bary);
         point_to_draw.rotate(p3, rot);
         glColor3ub(pixel.r, pixel.g, pixel.b); /// control color
-        glVertex2i(point_to_draw.x   + offset_x, point_to_draw.y + offset_y); /// control position
-        glVertex2i(point_to_draw.x+1 + offset_x, point_to_draw.y +1 + offset_y);
+        /// Do interpolation:
+        for(int i = 0; i < 1; i++){
+            glVertex2i(point_to_draw.x+i + offset_x, point_to_draw.y +i + offset_y);
+        }
+//        glVertex2i(point_to_draw.x   + offset_x, point_to_draw.y + offset_y); /// control position
+//        glVertex2i(point_to_draw.x+1 + offset_x, point_to_draw.y +1 + offset_y);
     }
     glEnd();
 }
