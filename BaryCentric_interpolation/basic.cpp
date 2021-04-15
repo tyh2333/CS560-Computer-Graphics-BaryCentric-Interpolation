@@ -31,17 +31,24 @@ Point Triangle::bary_to_standard(BaryCentric b){
 
 Flower::Flower(){
 ///    read("./pic/flower.bmp");
-    int HEADER_SIZE = 54;
+    /// read the 54-byte header
+    int HEADER_SIZE = 54; /// 54 bytes
     int WIDTH_LOCATION = 18;
     int HEIGHT_LOCATION = 22;
     FILE * fd = fopen("./pic/flower.bmp","rb");
     unsigned char info[HEADER_SIZE];
+    /// size_t fread ( void * ptr, size_t size, size_t count, FILE * stream );
     fread(info, sizeof(unsigned char), HEADER_SIZE, fd);
-    /// casts that pointer to be a pointer to integer
+    /// extract image height and width from header
     width  = *(int *)&info[WIDTH_LOCATION];
     height = *(int *)&info[HEIGHT_LOCATION];
+    /// allocate 3 bytes per pixel
+    /// Now data should contain the (R, G, B) values of the pixels.
+    /// The color of pixel (i, j) is stored at
+    /// data[3 * (i * width + j)], data[3 * (i * width + j) + 1] and data[3 * (i * width + j) + 2].
     int PixelLength = 3 * width * height;
     auto * data = (unsigned char *) malloc(sizeof(unsigned char) * PixelLength);
+    /// read the rest of the data at once
     fread(data, sizeof(unsigned char), PixelLength, fd);/// read data
     fclose(fd);
 
