@@ -3,8 +3,10 @@
 
 Description:  Texture warping is a typical application of the graphical object manipulation. The basic operation is a triangle-based or quadrilateral-based transformation using either affine, or bilinear, or projective transformation.  This assignment is designed to deform an image in a 2D space with interaction by using mouse to click and drag in real time. The warping consists of geometric shape warping and texture warping. This assignment is to enhance the concept of geometric warping, texture (image) operation, and interpolation.
 
-Your implementation:  In this assignment, you will implement the warping by deforming corner vertices of a rectangle. Meanwhile, the texture should be mapped onto the deformed rectangle area. 
-![image](https://user-images.githubusercontent.com/29907622/114823657-d38d3e80-9d91-11eb-93e5-f4ef6422cac4.png)
+Your implementation:  In this assignment, you will implement the warping by deforming corner vertices of a rectangle. 
+Meanwhile, the texture should be mapped onto the deformed rectangle area.
+
+
 
 Your implementation consists of:
 (a)Load and display the image “flower.bmp”.
@@ -19,6 +21,7 @@ Implement following two functions:
 
                               
 (3)Load a 3D model from a file (.OBJ format) (e.g., teapot, car, or robot). File name can be hardcoded. Use mouse to rotate and/or zoom the teapot model.（20points）
+
 ![image](https://user-images.githubusercontent.com/29907622/114823713-e30c8780-9d91-11eb-940f-ae456877602e.png)
 ![image](https://user-images.githubusercontent.com/29907622/114823722-e6a00e80-9d91-11eb-9fdc-e03903f71e16.png)
 ![image](https://user-images.githubusercontent.com/29907622/114823733-e99aff00-9d91-11eb-9a9b-faaaf8f393fe.png)
