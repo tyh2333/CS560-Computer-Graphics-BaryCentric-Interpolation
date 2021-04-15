@@ -1,0 +1,30 @@
+Language: c++
+environment : MacOS
+
+RUN:
+(1) unzip
+(2) make
+(3) ./main
+
+opreations:
+(1) automatical rotation
+(2) left button of mouse: click and move to deform
+(3) keys:
+
+    (i) press t : switch to teapot,
+                 click and move mouse left button to rotate
+                 key 'i' to zoom in,
+                 key'o' to zoom out.
+
+    (ii) press b : switch to robot,
+                 click and move mouse left button to rotate
+                 key 'i' to zoom in,
+                 key'o' to zoom out.
+
+   (iii) press c : switch to car,
+                 click and move mouse left button to rotate
+                 key 'i' to zoom in,
+                 key'o' to zoom out.  
+
+    (iv) press f : switch back to flower,
+		           can still do deform.  
